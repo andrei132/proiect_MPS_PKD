@@ -1,6 +1,5 @@
 from functools import reduce
 import numpy as np
-import math
 
 def min_leafs(*data):
     """
