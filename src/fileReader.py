@@ -24,7 +24,7 @@ class FileReader:
         return [linie[idx] for linie in self.result]
 
     def get_element(self, i, j):
-        return self.result[i][j]
+        return float(self.result[i][j])
 
     def get_result(self):
         return self.result
