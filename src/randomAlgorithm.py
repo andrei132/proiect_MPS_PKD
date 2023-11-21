@@ -1,4 +1,5 @@
 import random
+import copy
 
 def random_choice(data, end=None, number=None):
     """
@@ -10,7 +11,8 @@ def random_choice(data, end=None, number=None):
         return random.randint(data, end)
     elif isinstance(data, list) and end is None and number is None:
         return random.choice(data)
-    elif isinstance(data, list) and end is None and isinstance(number, int) :
+    elif isinstance(data, list) and end is None and isinstance(number, int):
+        data = copy.copy(data)
         randomlist = []
         for _ in range(number):
             algorithm = random.choice(data)
