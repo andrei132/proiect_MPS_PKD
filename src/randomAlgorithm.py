@@ -21,3 +21,6 @@ def random_choice(data, end=None, number=None):
         return randomlist
     else:
         return None
+
+def random_numers_between(end, count, star=0):
+    return random.sample(range(star, end), count)
