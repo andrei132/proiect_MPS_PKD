@@ -23,4 +23,7 @@ def random_choice(data, end=None, number=None):
         return None
 
 def random_numers_between(end, count, star=0):
+    """
+        Generate a random list with number in range
+    """
     return random.sample(range(star, end), count)
