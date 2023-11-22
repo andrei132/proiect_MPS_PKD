@@ -25,15 +25,6 @@ def geometric_average(data):
     """
     return reduce(lambda x, y: x * y, data) ** (1 / len(data))
 
-# def weighted_average(data, dataw):
-#     """
-#     data - List of data.
-#     dataw - List of weights.
-#     """
-#     weighted_sum = sum(data[i] * dataw[i] for i in range(len(data)))
-#     total_weights = sum(dataw)
-#     return weighted_sum / total_weights
-
 def calculate_median(data):
     """
     data - List of data.
@@ -50,6 +41,7 @@ def calculate_median(data):
     
     return median
 
+# TODO Bringing to the same form as the other functions or thinking a useful way of calling 
 # def power_limit(data, power):
 #     """
 #     data - List of data.
@@ -63,6 +55,15 @@ def calculate_median(data):
 #     """
 #     result = np.log(data + 1)
 #     return np.max(np.maximum(0, np.minimum(1, result)))
+
+# def weighted_average(data, dataw):
+#     """
+#     data - List of data.
+#     dataw - List of weights.
+#     """
+#     weighted_sum = sum(data[i] * dataw[i] for i in range(len(data)))
+#     total_weights = sum(dataw)
+#     return weighted_sum / total_weights
 
 def sin_limit(data):
     """

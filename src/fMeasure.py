@@ -11,8 +11,9 @@ class FMeasure:
         self.best_tree = None
 
     def calculate_f_measure(self, tree_output: float, line: int, tree) -> float:
-        idx = round(tree_output * 255)
+        idx = min(round(tree_output * 255), 255)
         result = self.lutFile.get_element(line, idx)
+
         if result > self.best_result:
             self.best_result = result
             self.best_tree = tree

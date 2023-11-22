@@ -129,6 +129,15 @@ class RandomTree:
             raise Exception("Function not find [" + name + "]")
 
     def get_tree_result(self) -> float:
+        """
+        Get tree result after all operation
+
+        Raises:
+            Exception: If tree has no leaf with floats
+
+        Returns:
+            float: Calculated value
+        """
         if isinstance(self.content, float):
             return self.content
 
