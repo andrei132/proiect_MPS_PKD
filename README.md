@@ -1,4 +1,5 @@
 # [Padkraduli] Binarizare globală
+JIRA -> mpsproiect.atlassian.net
 ## FMeasure
 FMeasure e calculat comform urmatorului algoritm:
 Pentru un rând asociat unei imagini se obține o anumită valoare în intervalul 0-1, ex: 0.78. Valoarea respectivă se înmulțește cu 255, se aplică o operație de round pe aceasta, iar rezultatul final reprezintă un index pentru a determina care ar fi FMeasure-ul ce ar putea fi obținut pe respectiva imagine în urma rulării arborelui respectiv: 
