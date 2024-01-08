@@ -53,5 +53,8 @@ if __name__ == "__main__":
             best_f_measure = avg_f_measure
             best_tree = f_Measures[0].best_tree
 
+    best_tree.score = best_f_measure
     print(best_f_measure)
     best_tree.show()
+    # best_tree.serialize()
+    # print(rTree.RandomTree.deserialize_all())

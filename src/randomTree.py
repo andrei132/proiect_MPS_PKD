@@ -2,6 +2,9 @@ import fileReader
 import randomAlgorithm
 import functions
 import inspect
+import time
+import pickle
+import os
 import logging
 from init import configure_logging
 
@@ -13,6 +16,7 @@ class RandomTree:
         self.content = content
         self.children = []
         self._last_level_ = []
+        self.score = 0
 
     def add_child(self, tree):
         self.children.append(tree)
@@ -43,6 +47,21 @@ class RandomTree:
             for value in data_line:
                 node.add_child(RandomTree(value))
         return
+    
+    def serialize(self):
+        with open(f"../resources/serialized-trees/{int(time.time())}.pkl", "wb") as outfile:
+            pickle.dump(self, outfile)
+
+    @staticmethod
+    def deserialize_all():
+        path = "../resources/serialized-trees/"
+        trees = []
+        for file in os.listdir(path):
+            if file.endswith(".pkl"):
+                with open(path + file, "rb") as infile:
+                    tree = pickle.load(infile)
+                trees.append(tree)
+        return trees
 
     @staticmethod
     def generate_random_tree():
