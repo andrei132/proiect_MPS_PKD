@@ -8,10 +8,12 @@ import os
 import logging
 from init import configure_logging
 
+
 class RandomTree:
     """
     Generate and/or operate with tree and/or tree nodes.
     """
+
     def __init__(self, content):
         self.content = content
         self.children = []
@@ -20,18 +22,18 @@ class RandomTree:
 
     def add_child(self, tree):
         self.children.append(tree)
-        
+
     def get_children(self):
         return self.children
-    
+
     def get_content(self):
         return self.content
-    
+
     def exec_function(self, *data):
         if callable(self.content):
             return self.content(*data)
         raise TypeError("Not a function")
-    
+
     def show(self, level=0):
         print("    " * level, self.content)
         for child in self.children:
@@ -41,7 +43,7 @@ class RandomTree:
         if self._last_level_ == []:
             raise Exception("Non root node or tree was not generated random with generate_random_tree()")
         # values_count = randomAlgorithm.random_choice(1, len(data_line))
-        
+
         for node in self._last_level_:
             # choosen_values = randomAlgorithm.random_choice(data=data_line, number=values_count)
             for value in data_line:
@@ -63,6 +65,14 @@ class RandomTree:
                 trees.append(tree)
         return trees
 
+    def remove_last_level(self):
+        if self._last_level_ == []:
+            raise Exception("Non root node or tree was not generated random with generate_random_tree()")
+        for node in self._last_level_:
+            # choosen_values = randomAlgorithm.random_choice(data=data_line, number=values_count)
+            node.children.clear()
+        return
+
     @staticmethod
     def generate_random_tree():
         """
@@ -75,9 +85,9 @@ class RandomTree:
             obj = getattr(functions, name)
             if inspect.isfunction(obj):
                 node_functions.append(name)
-                
+
         nodes = []
-        
+
         values_count = randomAlgorithm.random_choice(3, len(node_functions))
         logging.info(f'Au fost alease [{str(values_count)}] functii')
         # choose random amount of values to be leaf nodes
@@ -106,14 +116,15 @@ class RandomTree:
                 # set a random function as content
                 tmp_tree = RandomTree(randomAlgorithm.random_choice(node_functions))
                 # get a random number of connections with lower-level nodes
-                connections_with_lower_level_count = randomAlgorithm.random_choice(1, len(nodes[i-1]))
-                selected_connections = randomAlgorithm.random_choice(data=nodes[i-1], number=connections_with_lower_level_count)
+                connections_with_lower_level_count = randomAlgorithm.random_choice(1, len(nodes[i - 1]))
+                selected_connections = randomAlgorithm.random_choice(data=nodes[i - 1],
+                                                                     number=connections_with_lower_level_count)
                 # establish connections
                 for connection in selected_connections:
                     tmp_tree.add_child(connection)
                 tmp.append(tmp_tree)
             nodes.append(tmp)
-        
+
         # set the root node
         logging.info(f'Pentru root a fost aleasa functia :')
         output_node = RandomTree(randomAlgorithm.random_choice(node_functions))
@@ -168,7 +179,7 @@ class RandomTree:
             return self.content
 
         values = []
-        node:RandomTree
+        node: RandomTree
         for node in self.children:
             values.append(node.get_tree_result())
         if values == []:
