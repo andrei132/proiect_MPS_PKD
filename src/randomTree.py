@@ -5,6 +5,8 @@ import inspect
 import time
 import pickle
 import os
+import logging
+from init import configure_logging
 
 class RandomTree:
     """
@@ -66,7 +68,7 @@ class RandomTree:
         """
         Generate a randomized tree from leaves up to the root.
         """
-
+        configure_logging()
         # get available tree functions (functions to process data from csv)
         node_functions = []
         for name in dir(functions):
@@ -74,12 +76,13 @@ class RandomTree:
             if inspect.isfunction(obj):
                 node_functions.append(name)
                 
-
         nodes = []
         
         values_count = randomAlgorithm.random_choice(3, len(node_functions))
+        logging.info(f'Au fost alease [{str(values_count)}] functii')
         # choose random amount of values to be leaf nodes
         choosen_values = randomAlgorithm.random_choice(data=node_functions, number=values_count)
+
 
         last_level_tmp = []
         for value in choosen_values:
@@ -89,12 +92,15 @@ class RandomTree:
         # get a random number of levels which the result tree will be made of
         # (leaves and root count as levels)
         levels_count = randomAlgorithm.random_choice(3, 7)
+        logging.info(f'Se creeaza un arbore cu [{str(levels_count)}] nivele')
 
         # for each level
         for i in range(1, levels_count - 1):
             tmp = []
             # get a random number of nodes on level
             nodes_on_level = randomAlgorithm.random_choice(3, 7)
+            logging.info(f'Nivelul [{str(i)}] are [{str(nodes_on_level)}] noduri')
+            logging.info(f'Pentru noduri au fost alese functiile :')
             # for each new node
             for _ in range(nodes_on_level):
                 # set a random function as content
@@ -109,6 +115,7 @@ class RandomTree:
             nodes.append(tmp)
         
         # set the root node
+        logging.info(f'Pentru root a fost aleasa functia :')
         output_node = RandomTree(randomAlgorithm.random_choice(node_functions))
         output_node._last_level_.extend(last_level_tmp)
         for node in nodes[-1]:
