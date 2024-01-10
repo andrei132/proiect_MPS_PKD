@@ -30,7 +30,7 @@ class FMeasure:
         return self.best_tree
 
     def calculate_f_measure_for_local(self):
-        print(self.tp, self.tn, self.fp, self.fn)
+        # print(self.tp, self.tn, self.fp, self.fn)
         return self.tp / (self.tp + 0.5 * (self.fp + self.fn)) * 100
 
     def recalculate_tp_fp_fn_tn_for_local(self, local_file_csv: FileReader, line_index: int, threshold: float):
