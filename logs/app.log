@@ -1,119 +1,13 @@
-2024-01-08 19:59:52,765 - INFO - A fost citit fisierul cu calea ../resources/mps-global/LUTTest.csv
-2024-01-08 19:59:52,765 - INFO - A fost citit fisierul cu calea ../resources/mps-global/GlobalTest.csv
-2024-01-08 19:59:53,055 - INFO - Numarul total de algoritmi : [15]
-2024-01-08 19:59:53,056 - INFO - Se creeaza arborele cu numarul : [0]
-2024-01-08 19:59:53,056 - INFO - Au fost alease [6] functii
-2024-01-08 19:59:53,056 - INFO - A fost aleasa functia : min_leafs
-2024-01-08 19:59:53,056 - INFO - A fost aleasa functia : max_leafs
-2024-01-08 19:59:53,057 - INFO - A fost aleasa functia : arithmetic_average
-2024-01-08 19:59:53,057 - INFO - A fost aleasa functia : calculate_median
-2024-01-08 19:59:53,057 - INFO - A fost aleasa functia : sin_limit
-2024-01-08 19:59:53,060 - INFO - A fost aleasa functia : geometric_average
-2024-01-08 19:59:53,060 - INFO - Se creeaza un arbore cu [6] nivele
-2024-01-08 19:59:53,060 - INFO - Nivelul [1] are [3] noduri
-2024-01-08 19:59:53,061 - INFO - Pentru noduri au fost alese functiile :
-2024-01-08 19:59:53,061 - INFO - calculate_median
-2024-01-08 19:59:53,061 - INFO - calculate_median
-2024-01-08 19:59:53,062 - INFO - geometric_average
-2024-01-08 19:59:53,062 - INFO - Nivelul [2] are [5] noduri
-2024-01-08 19:59:53,062 - INFO - Pentru noduri au fost alese functiile :
-2024-01-08 19:59:53,063 - INFO - geometric_average
-2024-01-08 19:59:53,063 - INFO - arithmetic_average
-2024-01-08 19:59:53,064 - INFO - geometric_average
-2024-01-08 19:59:53,064 - INFO - sin_limit
-2024-01-08 19:59:53,064 - INFO - geometric_average
-2024-01-08 19:59:53,065 - INFO - Nivelul [3] are [7] noduri
-2024-01-08 19:59:53,065 - INFO - Pentru noduri au fost alese functiile :
-2024-01-08 19:59:53,065 - INFO - max_leafs
-2024-01-08 19:59:53,066 - INFO - calculate_median
-2024-01-08 19:59:53,066 - INFO - min_leafs
-2024-01-08 19:59:53,066 - INFO - min_leafs
-2024-01-08 19:59:53,067 - INFO - arithmetic_average
-2024-01-08 19:59:53,067 - INFO - geometric_average
-2024-01-08 19:59:53,067 - INFO - geometric_average
-2024-01-08 19:59:53,067 - INFO - Nivelul [4] are [7] noduri
-2024-01-08 19:59:53,068 - INFO - Pentru noduri au fost alese functiile :
-2024-01-08 19:59:53,068 - INFO - geometric_average
-2024-01-08 19:59:53,068 - INFO - sin_limit
-2024-01-08 19:59:53,069 - INFO - arithmetic_average
-2024-01-08 19:59:53,069 - INFO - geometric_average
-2024-01-08 19:59:53,069 - INFO - sin_limit
-2024-01-08 19:59:53,070 - INFO - arithmetic_average
-2024-01-08 19:59:53,070 - INFO - calculate_median
-2024-01-08 19:59:53,070 - INFO - Pentru root a fost aleasa functia :
-2024-01-08 19:59:53,070 - INFO - max_leafs
-2024-01-08 19:59:53,071 - INFO - Numarul de algoritmi care v-a fi pe ultimul nivel al arborelui : [4]
-2024-01-08 20:00:00,107 - INFO - Se creeaza arborele cu numarul : [1]
-2024-01-08 20:00:00,108 - INFO - Au fost alease [3] functii
-2024-01-08 20:00:00,108 - INFO - A fost aleasa functia : geometric_average
-2024-01-08 20:00:00,108 - INFO - A fost aleasa functia : arithmetic_average
-2024-01-08 20:00:00,109 - INFO - A fost aleasa functia : min_leafs
-2024-01-08 20:00:00,109 - INFO - Se creeaza un arbore cu [6] nivele
-2024-01-08 20:00:00,110 - INFO - Nivelul [1] are [3] noduri
-2024-01-08 20:00:00,110 - INFO - Pentru noduri au fost alese functiile :
-2024-01-08 20:00:00,111 - INFO - min_leafs
-2024-01-08 20:00:00,111 - INFO - sin_limit
-2024-01-08 20:00:00,112 - INFO - min_leafs
-2024-01-08 20:00:00,112 - INFO - Nivelul [2] are [6] noduri
-2024-01-08 20:00:00,113 - INFO - Pentru noduri au fost alese functiile :
-2024-01-08 20:00:00,113 - INFO - max_leafs
-2024-01-08 20:00:00,113 - INFO - sin_limit
-2024-01-08 20:00:00,114 - INFO - min_leafs
-2024-01-08 20:00:00,114 - INFO - min_leafs
-2024-01-08 20:00:00,115 - INFO - calculate_median
-2024-01-08 20:00:00,115 - INFO - sin_limit
-2024-01-08 20:00:00,115 - INFO - Nivelul [3] are [5] noduri
-2024-01-08 20:00:00,116 - INFO - Pentru noduri au fost alese functiile :
-2024-01-08 20:00:00,116 - INFO - sin_limit
-2024-01-08 20:00:00,116 - INFO - min_leafs
-2024-01-08 20:00:00,117 - INFO - geometric_average
-2024-01-08 20:00:00,117 - INFO - max_leafs
-2024-01-08 20:00:00,118 - INFO - sin_limit
-2024-01-08 20:00:00,118 - INFO - Nivelul [4] are [5] noduri
-2024-01-08 20:00:00,118 - INFO - Pentru noduri au fost alese functiile :
-2024-01-08 20:00:00,119 - INFO - calculate_median
-2024-01-08 20:00:00,119 - INFO - calculate_median
-2024-01-08 20:00:00,120 - INFO - geometric_average
-2024-01-08 20:00:00,120 - INFO - max_leafs
-2024-01-08 20:00:00,120 - INFO - arithmetic_average
-2024-01-08 20:00:00,121 - INFO - Pentru root a fost aleasa functia :
-2024-01-08 20:00:00,121 - INFO - max_leafs
-2024-01-08 20:00:00,122 - INFO - Numarul de algoritmi care v-a fi pe ultimul nivel al arborelui : [5]
-2024-01-08 20:00:07,051 - INFO - Se creeaza arborele cu numarul : [2]
-2024-01-08 20:00:07,051 - INFO - Au fost alease [3] functii
-2024-01-08 20:00:07,052 - INFO - A fost aleasa functia : geometric_average
-2024-01-08 20:00:07,052 - INFO - A fost aleasa functia : min_leafs
-2024-01-08 20:00:07,053 - INFO - A fost aleasa functia : arithmetic_average
-2024-01-08 20:00:07,053 - INFO - Se creeaza un arbore cu [6] nivele
-2024-01-08 20:00:07,053 - INFO - Nivelul [1] are [4] noduri
-2024-01-08 20:00:07,054 - INFO - Pentru noduri au fost alese functiile :
-2024-01-08 20:00:07,054 - INFO - calculate_median
-2024-01-08 20:00:07,055 - INFO - arithmetic_average
-2024-01-08 20:00:07,055 - INFO - sin_limit
-2024-01-08 20:00:07,056 - INFO - sin_limit
-2024-01-08 20:00:07,056 - INFO - Nivelul [2] are [7] noduri
-2024-01-08 20:00:07,056 - INFO - Pentru noduri au fost alese functiile :
-2024-01-08 20:00:07,057 - INFO - max_leafs
-2024-01-08 20:00:07,057 - INFO - arithmetic_average
-2024-01-08 20:00:07,058 - INFO - min_leafs
-2024-01-08 20:00:07,058 - INFO - min_leafs
-2024-01-08 20:00:07,058 - INFO - max_leafs
-2024-01-08 20:00:07,059 - INFO - arithmetic_average
-2024-01-08 20:00:07,059 - INFO - sin_limit
-2024-01-08 20:00:07,059 - INFO - Nivelul [3] are [3] noduri
-2024-01-08 20:00:07,060 - INFO - Pentru noduri au fost alese functiile :
-2024-01-08 20:00:07,060 - INFO - arithmetic_average
-2024-01-08 20:00:07,061 - INFO - sin_limit
-2024-01-08 20:00:07,061 - INFO - arithmetic_average
-2024-01-08 20:00:07,062 - INFO - Nivelul [4] are [7] noduri
-2024-01-08 20:00:07,062 - INFO - Pentru noduri au fost alese functiile :
-2024-01-08 20:00:07,062 - INFO - min_leafs
-2024-01-08 20:00:07,063 - INFO - min_leafs
-2024-01-08 20:00:07,063 - INFO - geometric_average
-2024-01-08 20:00:07,064 - INFO - calculate_median
-2024-01-08 20:00:07,064 - INFO - calculate_median
-2024-01-08 20:00:07,064 - INFO - sin_limit
-2024-01-08 20:00:07,065 - INFO - calculate_median
-2024-01-08 20:00:07,065 - INFO - Pentru root a fost aleasa functia :
-2024-01-08 20:00:07,065 - INFO - sin_limit
-2024-01-08 20:00:07,066 - INFO - Numarul de algoritmi care v-a fi pe ultimul nivel al arborelui : [13]
+2024-01-09 01:26:23,447 - INFO - Au fost alease [3] functii
+2024-01-09 01:26:23,447 - INFO - A fost aleasa functia : min_leafs
+2024-01-09 01:26:23,447 - INFO - A fost aleasa functia : arithmetic_average
+2024-01-09 01:26:23,447 - INFO - A fost aleasa functia : sin_limit
+2024-01-09 01:26:23,447 - INFO - Se creeaza un arbore cu [3] nivele
+2024-01-09 01:26:23,447 - INFO - Nivelul [1] are [4] noduri
+2024-01-09 01:26:23,447 - INFO - Pentru noduri au fost alese functiile :
+2024-01-09 01:26:23,447 - INFO - calculate_median
+2024-01-09 01:26:23,447 - INFO - min_leafs
+2024-01-09 01:26:23,448 - INFO - min_leafs
+2024-01-09 01:26:23,448 - INFO - min_leafs
+2024-01-09 01:26:23,448 - INFO - Pentru root a fost aleasa functia :
+2024-01-09 01:26:23,448 - INFO - min_leafs

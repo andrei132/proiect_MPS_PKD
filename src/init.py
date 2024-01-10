@@ -1,5 +1,6 @@
 from os import listdir
 from os.path import isfile, join
+from multiprocessing import Process, current_process
 
 import randomTree as rTree
 import fileReader as fReader
@@ -49,14 +50,16 @@ def global_bin(lut_file_path, global_file_path):
 
         # Check if is the best tree
         avg_f_measure = sum(x.best_result for x in f_Measures) / len(f_Measures)
+        print(avg_f_measure)
         if avg_f_measure > best_f_measure:
             best_f_measure = avg_f_measure
             best_tree = f_Measures[0].best_tree
+            best_tree.serialize(name=current_process().name)
 
     best_tree.score = best_f_measure
     print(best_f_measure)
-    best_tree.show()
-    # best_tree.serialize()
+    # best_tree.show()
+    best_tree.serialize(name=current_process().name)
     # print(rTree.RandomTree.deserialize_all())
 
 
@@ -99,15 +102,32 @@ if __name__ == "__main__":
                         help='If -t is given locally and you want to check only one file, the path must be entered here')
     configure_logging()
     cfg = parser.parse_args()
+    rTree.RandomTree.deserialize_all()
+    best_tree = None
+    if cfg.use_saved_best:
+        for tr in rTree.RandomTree.deserialize_all():
+            if (best_tree == None):
+                best_tree = tr
+            elif best_tree.score < tr.score:
+                best_tree = tr
+        print(best_tree.score)
     if cfg.type == 'global':
-        global_bin(cfg.lut_file, cfg.global_file)
+        processes = []
+        for i in range(12):
+            p = Process(target=global_bin, args=(cfg.lut_file, cfg.global_file))
+            processes.append(p)
+            p.start()
+        for p in processes:
+            p.join()
+
+        # global_bin(cfg.lut_file, cfg.global_file)
     elif cfg.type == 'local':
         if cfg.local_dir is not None:
             only_files = [join(cfg.local_dir, f) for f in listdir(cfg.local_dir) if isfile(join(cfg.local_dir, f))]
             for file in only_files:
-                local_bin(file)
+                local_bin(file, use_tree=best_tree)
         elif cfg.local_file is not None:
-            local_bin(cfg.local_file)
+            local_bin(cfg.local_file, use_tree=best_tree)
         else:
             parser.print_help()
     else:

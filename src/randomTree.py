@@ -50,8 +50,8 @@ class RandomTree:
                 node.add_child(RandomTree(value))
         return
     
-    def serialize(self):
-        with open(f"../resources/serialized-trees/{int(time.time())}.pkl", "wb") as outfile:
+    def serialize(self, name=""):
+        with open(f"../resources/serialized-trees/{name}{int(time.time())}.pkl", "wb") as outfile:
             pickle.dump(self, outfile)
 
     @staticmethod
@@ -60,8 +60,10 @@ class RandomTree:
         trees = []
         for file in os.listdir(path):
             if file.endswith(".pkl"):
+                # print(file, end=" ")
                 with open(path + file, "rb") as infile:
                     tree = pickle.load(infile)
+                # print(tree.score)
                 trees.append(tree)
         return trees
 
